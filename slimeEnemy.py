@@ -8,8 +8,8 @@ class SlimeEnemy:
         self.y = y
         self.player = player
         self.display_scroll = display_scroll
-        self.animation_images = [pygame.image.load("../Documents/SurvivalPythonGame/assets/slime_animation_0.png"), pygame.image.load("../Documents/SurvivalPythonGame/assets/slime_animation_1.png"),
-        pygame.image.load("../Documents/SurvivalPythonGame/assets/slime_animation_2.png"), pygame.image.load("../Documents/SurvivalPythonGame/assets/slime_animation_0.png")]
+        self.animation_images = [pygame.image.load("./assets/slime_animation_0.png"), pygame.image.load("./assets/slime_animation_1.png"),
+        pygame.image.load("./assets/slime_animation_2.png"), pygame.image.load("./assets/slime_animation_0.png")]
         self.animation_count = 0
         self.reset_offset = 0
         self.offset_x = random.randrange(-300, 300)

@@ -27,10 +27,10 @@ class Game:
                     pygame.quit()
                     sys.exit()
 
-                self.display.fill('black')
-                self.level.run()
-                pygame.display.update()
-                self.clock.tick(FPS)
+            self.display.fill('black')
+            self.level.run()
+            pygame.display.update()
+            self.clock.tick(FPS)
         # player = Player(400, 300, 32, 32)
 
         # display_scroll = [0, 0]
