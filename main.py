@@ -4,7 +4,7 @@ from slimeEnemy import *
 from player import *
 from playerBullet import *
 import sys
-from level import *
+from level import *              
 
 # player_walk_images = [pygame.image.load("../Documents/SurvivalPythonGame/assets/player_walk_0.png"), pygame.image.load("../Documents/SurvivalPythonGame/assets/player_walk_1.png"),
 #         pygame.image.load("../Documents/SurvivalPythonGame/assets/player_walk_2.png"), pygame.image.load("../Documents/SurvivalPythonGame/assets/player_walk_3.png")]

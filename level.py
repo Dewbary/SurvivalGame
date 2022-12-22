@@ -4,6 +4,7 @@ from tile import Tile
 from player import Player
 from support import *
 from random import choice
+from weapon import Weapon
 
 class Level:
     def __init__(self):
@@ -25,8 +26,8 @@ class Level:
             'grass': import_folder('./assets/grass'),
             'objects': import_folder('./assets/objects'),
         }
-        for style, layouts in layouts.items():
-            for row_index, row in enumerate(layouts):
+        for style, layout in layouts.items():
+            for row_index, row in enumerate(layout):
                 for col_index, col in enumerate(row):
                     if col != '-1':
                         x = col_index * TILESIZE
@@ -37,13 +38,13 @@ class Level:
                             random_grass_image = choice(graphics['grass'])
                             Tile((x,y), [self.visible_sprites, self.obstacles_sprites], 'grass', random_grass_image)
                         if style == 'object':
-                            pass
-        #         if col == 'x':
-        #             Tile((x,y), [self.visible_sprites, self.obstacles_sprites])
-        #         if col == 'p':
-        #             self.player = Player((x,y), [self.visible_sprites], self.obstacles_sprites)
+                            surf = graphics['objects'][int(col)]
+                            Tile((x,y),[self.visible_sprites, self.obstacles_sprites], 'object', surf)
+
         self.player = Player((2000,1430), [self.visible_sprites], self.obstacles_sprites)
 
+    def create_attack(self):
+        Weapon()
     
     def run(self):
         self.visible_sprites.custom_draw(self.player)
